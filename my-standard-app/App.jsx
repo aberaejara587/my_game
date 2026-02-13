@@ -74,7 +74,45 @@ function App() {
         onMouseUp={(e) => e.target.style.transform = 'scale(1)'}
       />
 
-      <div style={{ marginTop: '20px', width: '250px' }}>
+return (
+    <div style={{
+      textAlign: 'center', 
+      backgroundColor: '#1a1a1a', 
+      color: 'white',
+      minHeight: '100vh',  // Iddoo gubbaatti gadii uffisuuf
+      width: '100vw',     // Iddoo bitaatti mirgaatti guutuuf
+      display: 'flex', 
+      flexDirection: 'column',
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      fontFamily: 'Arial, sans-serif',
+      margin: '0',        // Iddoo duwwaa alaa balleessuuf
+      padding: '0',       // Iddoo duwwaa keessaa balleessuuf
+      position: 'fixed',  // Screen irratti akka hin sosochoone
+      top: '0',
+      left: '0'
+    }}>
+      <div style={{ marginBottom: '20px' }}>
+        <h1 style={{ fontSize: '3.5rem', color: 'gold', margin: '0' }}>💰 {coins}</h1>
+        <p style={{ color: '#4caf50' }}>+ {autoIncome}/sec (Bot Income)</p>
+      </div>
+
+      <img 
+        src="https://cryptologos.cc/logos/toncoin-ton-logo.png" 
+        onClick={handleClick}
+        style={{ 
+          width: '200px', 
+          cursor: 'pointer', 
+          borderRadius: '50%', 
+          boxShadow: '0 0 30px gold', 
+          transition: 'transform 0.1s' 
+        }} 
+        onMouseDown={(e) => e.target.style.transform = 'scale(0.95)'}
+        onMouseUp={(e) => e.target.style.transform = 'scale(1)'}
+      />
+
+      {/* Energy Bar Section */}
+      <div style={{ marginTop: '20px', width: '80%', maxWidth: '300px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <span>⚡ {energy} / 100</span>
         </div>
@@ -83,6 +121,7 @@ function App() {
         </div>
       </div>
 
+      {/* Upgrade Buttons Section */}
       <div style={{ display: 'flex', gap: '10px', marginTop: '30px' }}>
         <button onClick={buyUpgrade} style={btnStyle}>
           🚀 Multi-tap<br/><small>100 Coins</small>
