@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react'
 
 function App() {
@@ -54,9 +55,15 @@ function App() {
 
   return (
     <div style={{
-      textAlign: 'center', backgroundColor: '#1a1a1a', color: 'white',
-      height: '100vh', display: 'flex', flexDirection: 'column',
-      alignItems: 'center', justifyContent: 'center', fontFamily: 'Arial, sans-serif'
+      textAlign: 'center', 
+      backgroundColor: '#1a1a1a', 
+      color: 'white',
+      height: '100vh', 
+      display: 'flex', 
+      flexDirection: 'column',
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      fontFamily: 'Arial, sans-serif'
     }}>
       <div style={{ marginBottom: '20px' }}>
         <h1 style={{ fontSize: '3.5rem', color: 'gold', margin: '0' }}>💰 {coins}</h1>
@@ -67,13 +74,17 @@ function App() {
         src="https://cryptologos.cc/logos/toncoin-ton-logo.png" 
         onClick={handleClick}
         style={{ 
-          width: '200px', cursor: 'pointer', borderRadius: '50%', 
-          boxShadow: '0 0 30px gold', transition: 'transform 0.1s' 
+          width: '200px', 
+          cursor: 'pointer', 
+          borderRadius: '50%', 
+          boxShadow: '0 0 30px gold', 
+          transition: 'transform 0.1s' 
         }} 
         onMouseDown={(e) => e.target.style.transform = 'scale(0.95)'}
         onMouseUp={(e) => e.target.style.transform = 'scale(1)'}
       />
 
+      {/* Energy Bar Section */}
       <div style={{ marginTop: '20px', width: '250px' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between' }}>
           <span>⚡ {energy} / 100</span>
@@ -83,6 +94,7 @@ function App() {
         </div>
       </div>
 
+      {/* Upgrade Buttons Section */}
       <div style={{ display: 'flex', gap: '10px', marginTop: '30px' }}>
         <button onClick={buyUpgrade} style={btnStyle}>
           🚀 Multi-tap<br/><small>100 Coins</small>
@@ -96,8 +108,13 @@ function App() {
 }
 
 const btnStyle = {
-  backgroundColor: '#333', color: 'white', border: '1px solid gold',
-  padding: '10px', borderRadius: '10px', cursor: 'pointer', fontSize: '0.8rem'
+  backgroundColor: '#333', 
+  color: 'white', 
+  border: '1px solid gold',
+  padding: '10px', 
+  borderRadius: '10px', 
+  cursor: 'pointer', 
+  fontSize: '0.8rem'
 }
 
 export default App;
